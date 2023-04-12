@@ -1,0 +1,559 @@
+:root {
+  --blue: rgb(61, 90, 254);
+  --light-blue: rgb(33, 150, 243);
+}
+
+.wrapper {
+  display: flex;
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.color {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fe71eb,
+    #70a0ff,
+    #7cfcfe
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5c85ff,
+    #70e2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wrapperLeft {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 50px;
+}
+.wrapperRight {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 60px;
+  padding-right: 50px;
+}
+
+:root {
+  --primary-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 140vh;
+  display: grid;
+  place-items: center;
+
+  margin: 0.2rem;
+  font-family: 'Montserrat', sans-serif;
+  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0rem;
+  color: black;
+}
+
+
+
+.card {
+  overflow: auto;
+  width: 450px;
+  max-height: 1000px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 0;
+  backdrop-filter: blur(10px);
+}
+
+.card:after {
+  content: '';
+  height: 70px;
+  width: 1px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, var(--primary-color), transparent);
+  opacity: 0;
+}
+
+.card:after {
+  top: 65%;
+  opacity: 0;
+}
+
+.card:hover:after {
+  top: 25%;
+  opacity: 1;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card-content > :is(h1, h3, p) {
+  text-align: center;
+}
+
+.card-content > h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2.6rem;
+}
+
+.card-content > h3 {
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+
+.card-content > p {
+  color: rgb(0, 0, 0);
+  line-height: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: calc(100% - 2rem);
+    margin: 0rem 1rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-content {
+    padding: 0rem;
+  }
+
+  .card-content > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.card .card-content-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.card-content > h1 {
+  font-size: 2.2rem;
+}
+
+.card.right {
+  margin-left: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #3171b8;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.link {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  color: #000000;
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(2em, 5vmin, 2.5em);
+  /* padding: clamp(0.25em, 1vmin, 1em) clamp(1em, 4vmin, 4em); */
+  position: relative;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--light-blue);
+}
+
+.link:hover:before {
+  transition: width 600ms ease;
+  width: 100%;
+}
+
+.link:before {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--blue) var(--light-blue-percent),
+    var(--light-blue)
+  );
+  content: '';
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 0%;
+  position: absolute;
+}
+
+.link:nth-child(3) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.eot');
+  src: url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.woff')
+      format('woff'),
+    url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.ttf')
+      format('truetype'),
+    url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.svg#fontello')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*='icon-'] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-size: 3em;
+}
+
+.IT:after {
+  content: 'IT';
+  font-size: 4rem;
+}
+.SDP:after {
+  content: 'SDP';
+  font-size: 4rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #ffffff
+    url(https://css-tricks.com/examples/RoundButtons/images/bg.png) repeat
+    center top;
+}
+
+.nav {
+  list-style: none;
+  text-align: center;
+}
+
+.nav li {
+  position: relative;
+  display: inline-block;
+  margin-right: -4px;
+}
+
+.nav li:before {
+  content: '';
+  display: block;
+
+  width: 100%;
+  height: 1px;
+  position: fixed;
+  top: 50%;
+  z-index: -1;
+}
+
+.nav a:link,
+.nav a:visited {
+  display: block;
+  text-decoration: none;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ffffff),
+    to(#e7e7e7)
+  );
+  background-image: -webkit-linear-gradient(top, #0062ff, #00d5ff);
+  background-image: -moz-linear-gradient(top, #ffffff, #e7e7e7);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  color: #ffffff;
+  margin: 36px;
+  width: 144px;
+  height: 140px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #0033ff, inset 0px 2px 3px #00e1ff;
+  border: solid 1px transparent;
+}
+
+.nav a:active {
+  box-shadow: none;
+  border: solid 1px #1e00ff;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #47fffc;
+  background: #4775ff;
+}
+​
+
+
+
+ 
+/* Change the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+
+/* Change the color of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Change the color of the track */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* For IE/Edge */
+::-ms-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* For all browsers */
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+::-ms-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Select the track of the scrollbar */
+::-webkit-scrollbar-track {
+  /* Set the background color of the track */
+  background-color: #ababab;
+
+  /* Set the border-radius to create rounded corners */
+  border-radius: 10px;
+}
+
+/* Mobile Specific Styling */
+
+@media (max-width: 767px) {
+  .card {
+    overflow: auto;
+    width: 200px;
+    max-height: 1000px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .card:after {
+    content: '';
+    height: 70px;
+    width: 1px;
+    position: absolute;
+    left: -1px;
+    top: 65%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent, var(--primary-color), transparent);
+    opacity: 0;
+  }
+
+  .card:after {
+    top: 65%;
+    opacity: 0;
+  }
+
+  .card:hover:after {
+    top: 25%;
+    opacity: 1;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    );
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+
+  .card-content > :is(h1, h3, p) {
+    text-align: center;
+  }
+
+  .card-content > h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2.6rem;
+  }
+
+  .card-content > h3 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.76rem;
+  }
+
+  .card-content > p {
+    color: rgb(0, 0, 0);
+    line-height: 1.5rem;
+  }
+
+  .wrapperLeft {
+    display: flex;
+    margin-bottom: 0;
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+  .wrapperRight {
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  .WYL {
+    font-size: 2px;
+  }
+
+  .color {
+    background: #12c2e9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fe71eb,
+      #70a0ff,
+      #7cfcfe
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #5c85ff,
+      #70e2ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+.link, .new-content {
+  color: var(--light-blue);
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+.link:hover, .new-content:hover {
+  --light-blue-percent: 100%;
+  color: var(--blue);
+}
+
+.link::after, .new-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-blue);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.link:hover::after, .new-content:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
