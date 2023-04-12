@@ -1,8 +1,7 @@
-const itBtn = document.getElementById('it')
-const sdpBtn = document.getElementById('sdp')
+document.getElementById('it').addEventListener('click', itClick);
+document.getElementById('sdp').addEventListener('click', sdpClick);
 const classesDiv = document.getElementById("classes");
 
-itBtn.addEventListener()
 
 function itClick() {
   const testData = [
@@ -29,5 +28,28 @@ function itClick() {
 }
 
 function sdpClick() {
+  const testData = [
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+    "Beep",
+    "Boop",
+  ];
 
+  // Convert the test data into an HTML string
+  const classesHtml = testData.map(text => `<a class="link" target="_blank">${text}</a>`).join("");
+
+  // Set the innerHTML of the "classes" div to the HTML string
+  classesDiv.innerHTML = classesHtml;
 }
