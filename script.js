@@ -1,6 +1,7 @@
 document.getElementById('it').addEventListener('click', itClick);
 document.getElementById('sdp').addEventListener('click', sdpClick);
 const classesDiv = document.getElementById("classes");
+const classesDiv = document.getElementById("classes");
 
 
 function itClick() {
