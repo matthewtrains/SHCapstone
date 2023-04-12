@@ -2,21 +2,7 @@ const itBtn = document.getElementById('it')
 const sdpBtn = document.getElementById('sdp')
 const classesDiv = document.getElementById("classes");
 
-const testData = [
-  "How",
-  "Ethical Hacking",
-  "Cloud and Devops",
-  "VOIP",
-  "Capstone Project",
-  "Webserver Admin",
-  "San and desater recovery",
-  "Test",
-  "Test",
-  "Test",
-  "Test",
-  "Test",
-  "Test"
-];
+
 
 
 
