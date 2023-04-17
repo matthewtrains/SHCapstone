@@ -11,6 +11,7 @@
   align-items: flex-start;
   margin-bottom: 0;
   background-color: white;
+  flex-direction: row;
 }
 
 .color {
