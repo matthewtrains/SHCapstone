@@ -1,7 +1,11 @@
-document.getElementById('back').addEventListener('click', backClick);
+document.addEventListener("DOMContentLoaded", function() {
 
-function backClick() {
-  
-  history.back();
-  
-}
+  document.getElementById('back').addEventListener('click', backClick);
+
+  function backClick() {
+
+    history.back();
+
+  }
+
+})

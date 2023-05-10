@@ -1,16 +1,16 @@
-document.getElementById('it').addEventListener('click', itClick);
-document.getElementById('sdp').addEventListener('click', sdpClick);
-document.getElementById('clearAll').addEventListener('click', clearAllClick);
-document.getElementById('cheatSheets').addEventListener('click', cheats);
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('it').addEventListener('click', itClick);
+  document.getElementById('sdp').addEventListener('click', sdpClick);
+  document.getElementById('clearAll').addEventListener('click', clearAllClick);
 
-classesDiv = document.getElementById("classes");
-detailsDiv = document.getElementById("details");
+  classesDiv = document.getElementById("classes");
+  detailsDiv = document.getElementById("details");
 
-function itClick() {
+  function itClick() {
 
-  classesDiv.innerHTML = "";
-  detailsDiv.innerHTML = "";
-  
+    classesDiv.innerHTML = "";
+    detailsDiv.innerHTML = "";
+
     // Load the JSON file
     fetch('Table.json')
       .then(response => response.json())
@@ -41,8 +41,8 @@ function itClick() {
 
   function sdpClick() {
     classesDiv.innerHTML = "";
-  detailsDiv.innerHTML = "";
-  
+    detailsDiv.innerHTML = "";
+
     // Load the JSON file
     fetch('Table.json')
       .then(response => response.json())
@@ -77,9 +77,14 @@ function itClick() {
   }
 
 
+  document.getElementById('cheatSheets').addEventListener('click', cheats);
+
   function cheats() {
     window.location.href = "CheatSheets.html";
   }
+
+})
+
 
 
 

@@ -4,16 +4,15 @@
   --primary-color: #3700ff;
 }
 
-  .logo {
-  display: block;
-  margin: 0;
-  position: absolute;
-  top: 15%;
-  right: 58%;
-  transform: translate(-50%, -50%);
+.logo-wrapper {
   background-color: white;
-  border-radius: 1em;
-  padding: 2em;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  height: 5rem;
+  max-width: 100%;
 }
 
 
@@ -265,8 +264,6 @@ ul {
 
 
 
-
-
 .buttons {
   display: flex;
   justify-content: center;
@@ -275,10 +272,11 @@ ul {
 }
 
 .buttons-wrapper {
+  margin-top: 2% ;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 4rem;
   gap: 1rem;
 }
 
