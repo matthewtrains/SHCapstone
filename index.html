@@ -1,12 +1,20 @@
 <html class="color">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
+  <button class="button-29" id="cheatSheets">Cheatsheets!</button>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="button.css" rel="stylesheet" type="text/css" />
+
 </head>
+
+<a href="https://www.southhills.edu"><img class="logo" src="SouthHillsWebRetina.png" height="150px" width="350px"></a>
+  
 <body>
-  <nav>
+  <div class="buttons-wrapper">
+    <nav>
     <ul class="nav">
       <li>
         <a href="#" id="it">
@@ -20,27 +28,43 @@
           <span class="screen-reader-text">SDP</span>
         </a>
       </li>
-    </ul> <!-- add the closing </ul> tag here -->
+      <li>
+        <a href="#" id="clearAll">
+          <span class="Clear"></span>
+          <span class="screen-reader-text">Clear</span>
+        </a>
+      </li>
+    </ul>
   </nav>
-
-  <div class="wrapperLeft">
-    <div class="card">
-      <div class="card-content">
-        <h1>Classes:</h1>
-        <div id="classes"></div>
-      </div>
-    </div>
   </div>
 
-  <div class="wrapperRight">
-    <div class="card">
-      <div class="card-content">
-        <h1 class="WYL">Details:</h1>
-        <div id="details"></div>
+
+
+  <div class="wrapper">
+    <div class="wrapperLeft">
+      <div class="card">
+        <h1 class="ClassName">Classes:</h1>
+        <div class="card-content">
+          <div id="classes">
+            <h2>Please select a class above.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapperRight">
+      <div class="card">
+        <div class="card-content">
+          <h1 class="WYL">Details:</h1>
+          <div id="details">
+            <h2>Click a class to view the learning opourtunities.</h2>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>

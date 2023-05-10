@@ -1,59 +1,106 @@
 :root {
-  --blue: rgb(61, 90, 254);
+  --blue: rgb(62, 126, 254);
   --light-blue: rgb(33, 150, 243);
-  --primary-color: white;
+  --primary-color: #3700ff;
 }
+
+  .logo {
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  right: 58%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+}
+
 
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 0;
-  background-color: white;
-  flex-direction: row;
-}
-
-.color {
-  background: #12c2e9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #fe71eb,
-    #70a0ff,
-    #7cfcfe
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #5c85ff,
-    #70e2ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  padding: 5px 60px;
 }
 
 .wrapperLeft {
-  display: flex;
-  margin-bottom: 0;
-  width: 50%;
-  padding-left: 50px;
+  flex-basis: 50%;
+  margin-left: calc(2% + 8px);
 }
+
 .wrapperRight {
-  display: flex;
-  width: 50%;
-  margin-bottom: 0;
-  padding: 0 50px 0 60px;
+  flex-basis: 50%;
+  margin-left: 4%
 }
+
+
+.color {
+  height: 100%;
+  background: #001eff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #246dff,
+    #38bdff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #246dff,
+    #2eb9ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+@media (max-width: 768px) {
+  .color {
+    height: 100vh;
+  background: #5ca3ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+
+    #5c85ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+
+    #70e2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .card {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+
+  }
+
+  .wrapper {
+    margin: 2rem;
+    margin-left: 2.05rem;
+    text-align: center;
+  }
+
+  
+  
+}
+
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  height: 140vh;
-  display: grid;
+  padding: 0;
+  height: 100%;
   place-items: center;
-
-  margin: 0.2rem;
-  font-family: 'Montserrat', sans-serif;
-  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: scroll;
 }
 
 h1,
@@ -65,22 +112,62 @@ ul {
   color: black;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  background-color: #eee;
+  overflow: scroll;
+}
+
+.footer {
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 .card {
+  height: 70vh;
   position: relative;
+  margin-bottom: 10rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgb(0, 0, 0, 0.5);
-  border-radius: 1.5rem;
-  padding: 1rem;
-  margin-bottom: 0;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
+  padding: 0.50rem;
   backdrop-filter: blur(10px);
-  width: 100%;
+  flex-basis: auto;
+  flex-grow: 1;
+  overflow-y: scroll;
+  box-shadow: 0 0 50px #003beb;
+
+  
 }
 
 .card:after {
   content: '';
-  height: 70px;
+  height: 70vh;
   width: 1px;
   position: absolute;
   left: -1px;
@@ -90,6 +177,7 @@ ul {
   transition-timing-function: ease;
   background: linear-gradient(transparent, var(--primary-color), transparent);
   opacity: 0;
+  
 }
 
 .card:after {
@@ -103,6 +191,7 @@ ul {
 }
 
 .card-content {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,10 +205,36 @@ ul {
   background-size: 1.1rem 1.1rem;
   padding: 2rem;
   border-radius: 1.25rem;
-  overflow: hidden;
+
+  
 }
 
-.card-content > h1, .card-content > h3, .card-content > p) {
+.card .card-body {
+  padding-top: 50px; 
+  overflow-y: scroll;
+}
+
+
+.card-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-content::-webkit-scrollbar-track {
+  background-color: #adadad;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.card-content::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}
+
+
+
+.card-content > h1, .card-content > h3, .card-content > p {
   text-align: center;
 }
 
@@ -127,6 +242,15 @@ ul {
   color: rgb(0, 0, 0);
   font-size: 2.6rem;
 }
+
+.ClassName {
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 2.6rem;
+  text-align: center;
+  
+}
+
 
 .card-content > h3 {
   color: black;
@@ -139,51 +263,42 @@ ul {
   line-height: 1.5rem;
 }
 
-@media (max-width: 700px) {
-  .card {
-    width: calc(100% - 2rem);
-    margin: 0rem 1rem;
-    padding: 0.75rem;
-    border-radius: 1rem;
-  }
-}
 
-@media (max-width: 600px) {
-  .card-content {
-    padding: 0rem;
-  }
 
-  .card-content > h1 {
-    font-size: 2.2rem;
-  }
-}
 
-.card .card-content-wrapper {
-  max-height: 500px;
-  overflow-y: auto;
-}
-
-.card-content > h1 {
-  font-size: 2.2rem;
-}
-
-.card.right {
-  margin-left: 2rem;
-}
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 0;
   margin-top: 0.5rem;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2rem;
+  gap: 1rem;
+}
+
+.cheatsheets {
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 4em 4em;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 button {
   padding: 1rem 1rem;
   border: none;
   border-radius: 1rem;
-  background-color: #3171b8;
+  background-color: #001eff;
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -199,7 +314,6 @@ button:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   color: #000000;
   display: block;
-  font-family: 'Permanent Marker', cursive;
   font-size: clamp(2em, 5vmin, 2.5em);
   padding: clamp(0.25em, 1vmin, 1em) clamp(1em, 4vmin, 4em); 
   position: relative;
@@ -219,7 +333,7 @@ button:hover {
   background: linear-gradient(
     to right,
     transparent,
-    var(--blue) var(--light-blue-percent),
+    var(--primary-color) var(--primary-color-percent),
     var(--light-blue)
   );
   content: '';
@@ -240,48 +354,37 @@ button:hover {
   left: -9999px;
 }
 
-@font-face {
-  font-family: 'fontello';
-  src: url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.eot');
-  src: url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.woff')
-      format('woff'),
-    url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.ttf')
-      format('truetype'),
-    url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.svg#fontello')
-      format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 [class*='icon-'] {
-  font-family: 'fontello';
+  font-family: 'helvetica';
   font-style: normal;
   font-size: 3em;
 }
 
 .IT:after {
   content: 'IT';
-  font-size: 4rem;
+  font-size: 3.5rem;
+  
 }
 .SDP:after {
   content: 'SDP';
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.Clear:after {
+  content: 'Clear';
+  font-size: 3rem;
 }
 
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
-  background: #ffffff
-    url(https://css-tricks.com/examples/RoundButtons/images/bg.png) repeat
-    center top;
+  background: var(--blue);
 }
 
 .nav {
@@ -318,10 +421,8 @@ html {
     from(#ffffff),
     to(#e7e7e7)
   );
-  background-image: -webkit-linear-gradient(top, #0062ff, #00d5ff);
-  background-image: -moz-linear-gradient(top, #ffffff, #e7e7e7);
-  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+
   color: #ffffff;
   margin: 36px;
   width: 144px;
@@ -330,21 +431,24 @@ html {
   text-align: center;
   line-height: 144px;
   border-radius: 50%;
-  box-shadow: 0px 3px 8px #0033ff, inset 0px 2px 3px #00e1ff;
-  border: solid 1px transparent;
+
 }
 
-.nav a:active {
-  box-shadow: none;
-  border: solid 1px #1e00ff;
+.nav a:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
 .nav a:hover {
-  text-decoration: none;
-  color: #47fffc;
-  background: #4775ff;
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
 }
-​
+
+.nav a:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
 
 
 
@@ -407,125 +511,13 @@ html {
 /* Select the track of the scrollbar */
 ::-webkit-scrollbar-track {
   /* Set the background color of the track */
-  background-color: #ababab;
+  background-color: #ffffff;
 
   /* Set the border-radius to create rounded corners */
   border-radius: 10px;
 }
 
-/* Mobile Specific Styling */
 
-@media (max-width: 767px) {
-  .card {
-    overflow: auto;
-    width: 200px;
-    max-height: 1000px;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgb(255, 255, 255, 0.5);
-    border-radius: 1.5rem;
-    padding: 1rem;
-    margin-bottom: 0;
-    backdrop-filter: blur(10px);
-  }
-
-  .card:after {
-    content: '';
-    height: 70px;
-    width: 1px;
-    position: absolute;
-    left: -1px;
-    top: 65%;
-    transition: top, opacity;
-    transition-duration: 600ms;
-    transition-timing-function: ease;
-    background: linear-gradient(transparent, var(--primary-color), transparent);
-    opacity: 0;
-  }
-
-  .card:after {
-    top: 65%;
-    opacity: 0;
-  }
-
-  .card:hover:after {
-    top: 25%;
-    opacity: 1;
-  }
-
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    );
-    background-position: 50% 50%;
-    background-size: 1.1rem 1.1rem;
-    padding: 2rem;
-    border-radius: 1.25rem;
-    overflow: hidden;
-  }
-
-  .card-content > :is(h1, h3, p) {
-    text-align: center;
-  }
-
-  .card-content > h1 {
-    color: rgb(0, 0, 0);
-    font-size: 2.6rem;
-  }
-
-  .card-content > h3 {
-    color: black;
-    text-transform: uppercase;
-    font-size: 0.76rem;
-  }
-
-  .card-content > p {
-    color: rgb(0, 0, 0);
-    line-height: 1.5rem;
-  }
-
-  .wrapperLeft {
-    display: flex;
-    margin-bottom: 0;
-    padding-right: 1px;
-    padding-left: 1px;
-  }
-  .wrapperRight {
-    display: flex;
-    margin-bottom: 0;
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-
-  .WYL {
-    font-size: 2px;
-  }
-
-  .color {
-    background: #12c2e9; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #fe71eb,
-      #70a0ff,
-      #7cfcfe
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #5c85ff,
-      #70e2ff
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    min-height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 
 
 .link, .new-content {
@@ -536,8 +528,8 @@ html {
 }
 
 .link:hover, .new-content:hover {
-  --light-blue-percent: 100%;
-  color: var(--blue);
+  --primary-color-percent: 100%;
+  color: var(--primary-color);
 }
 
 .link::after, .new-content::after {
@@ -547,8 +539,8 @@ html {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--light-blue);
-  visibility: hidden;
+  background-color: black;
+  visibility: visible;
   transform: scaleX(0);
   transition: all 0.2s ease-in-out 0s;
 }

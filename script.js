@@ -1,86 +1,87 @@
 document.getElementById('it').addEventListener('click', itClick);
 document.getElementById('sdp').addEventListener('click', sdpClick);
-const classesDiv = document.getElementById("classes");
-const detailsDiv = document.getElementById("details");
+document.getElementById('clearAll').addEventListener('click', clearAllClick);
+document.getElementById('cheatSheets').addEventListener('click', cheats);
 
+classesDiv = document.getElementById("classes");
+detailsDiv = document.getElementById("details");
 
 function itClick() {
+
   classesDiv.innerHTML = "";
+  detailsDiv.innerHTML = "";
+  
+    // Load the JSON file
+    fetch('Table.json')
+      .then(response => response.json())
+      .then(data => {
+        // Get the class names
+        const classNames = data.programs.find(program => program.name === 'IT').classes.map(cls => cls.name);
 
-  const testData = [
-    "How",
-    "Ethical Hacking",
-    "Cloud and Devops",
-    "VOIP",
-    "Capstone Project",
-    "Webserver Admin",
-    "San and desater recovery",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test"
-  ];
+        // Convert the classNames into an HTML string
+        const classesHtml = classNames.map(name => `<a class="link">${name}</a>`).join("");
 
-  // Convert the test data into an HTML string
-  const classesHtml = testData.map(text => `<a class="link" target="_blank">${text}</a>`).join("");
+        // Set the innerHTML of the "classes" div to the HTML string
+        classesDiv.innerHTML = classesHtml;
 
-  // Set the innerHTML of the "classes" div to the HTML string
-  classesDiv.innerHTML = classesHtml;
+        // Add a click event listener to each link element
+        const linkElements = document.querySelectorAll(".link");
+        linkElements.forEach((element, index) => {
+          element.addEventListener("click", () => {
+            // Get the learning opportunities for the clicked class
+            const learnings = data.programs.find(program => program.name === 'IT').classes[index].learnings;
 
-  // Add a click event listener to each detail element
-  const detailElements = document.querySelectorAll(".link");
-  detailElements.forEach((element, index) => {
-    element.addEventListener("click", () => {
-      // Set the innerHTML of the "details" div to the appropriate HTML string
-      detailsDiv.innerHTML = `<h2>${testData[index]}</h2><p>Details for ${testData[index]}</p>`;
-    });
-  });
-}
+            // Set the innerHTML of the "details" div to the appropriate HTML string
+            detailsDiv.innerHTML = `<h2>${classNames[index]}</h2><ul>${learnings.map(learning => `<h2><li>${learning}</li></h2>`).join('')}</ul>`;
 
-function sdpClick() {
-  classesDiv.innerHTML = "";
+          });
+        });
+      })
+  }
 
-  const testData = [
-    "This",
-    "Is",
-    "To",
-    "Test",
-    "This",
-    "Function",
-    "This",
-    "Is",
-    "To",
-    "Test",
-    "This",
-    "Function",
-    "This",
-    "Is",
-    "To",
-    "Test",
-    "This",
-    "Function",
-    "This",
-    "Is",
-    "To",
-    "Test",
-    "This",
-    "Function"
-  ];
+  function sdpClick() {
+    classesDiv.innerHTML = "";
+  detailsDiv.innerHTML = "";
+  
+    // Load the JSON file
+    fetch('Table.json')
+      .then(response => response.json())
+      .then(data => {
+        // Get the class names
+        const classNames = data.programs.find(program => program.name === 'SDP').classes.map(cls => cls.name);
 
-  // Convert the test data into an HTML string
-  const classesHtml = testData.map(text => `<a class="link" target="_blank">${text}</a>`).join("");
+        // Convert the classNames into an HTML string
+        const classesHtml = classNames.map(name => `<a class="link">${name}</a>`).join("");
 
-  // Set the innerHTML of the "classes" div to the HTML string
-  classesDiv.innerHTML = classesHtml;
+        // Set the innerHTML of the "classes" div to the HTML string
+        classesDiv.innerHTML = classesHtml;
 
-  // Add a click event listener to each detail element
-  const detailElements = document.querySelectorAll(".link");
-  detailElements.forEach((element, index) => {
-    element.addEventListener("click", () => {
-      // Set the innerHTML of the "details" div to the appropriate HTML string
-      detailsDiv.innerHTML = `<h2>${testData[index]}</h2><p>Details for ${testData[index]}</p>`;
-    });
-  });
-}
+        // Add a click event listener to each link element
+        const linkElements = document.querySelectorAll(".link");
+        linkElements.forEach((element, index) => {
+          element.addEventListener("click", () => {
+            // Get the learning opportunities for the clicked class
+            const learnings = data.programs.find(program => program.name === 'IT').classes[index].learnings;
+
+            // Set the innerHTML of the "details" div to the appropriate HTML string
+            detailsDiv.innerHTML = `<h2>${classNames[index]}</h2><ul>${learnings.map(learning => `<h2><li>${learning}</li></h2>`).join('')}</ul>`;
+
+          });
+        });
+      })
+  }
+
+  function clearAllClick() {
+    classesDiv.innerHTML = "<h2>Please select a class above.</h2>";
+    detailsDiv.innerHTML = "<h2>Click a class to view the learning opourtunities.</h2>";
+  }
+
+
+  function cheats() {
+    window.location.href = "CheatSheets.html";
+  }
+
+
+
+
+
