@@ -1,0 +1,120 @@
+@media only screen and (max-width: 768px) {
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.wrapperLeft {
+  flex-basis: 10%;
+  margin-left: calc(2% + 0.5em);
+  padding-left: 1rem;
+}
+
+.wrapperRight {
+  flex-basis: 10%;
+  margin-left: 4%;
+  width: 10rm;
+  display: hidden; /* Hidden by default */
+
+}
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 50vh;
+    overflow-y: scroll;
+
+  }
+
+  .buttonsOLD {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+}
+  
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  padding-left: 2rem;
+}
+
+.cheatsheetsOLD {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1.25%;
+  margin-right: 3%;
+}
+
+  .cheatsheets {
+  position: absolute;
+  top: 200vw;
+  right: 10%;
+  /*margin-top: 200%; */
+  /* margin-right: 15%; */
+}
+
+button {
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #001eff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+.nav {
+  list-style: none;
+  text-align: center;
+  display: flex; /* Add this line */
+  justify-content: center; /* Add this line */
+}
+
+.nav li {
+  position: relative;
+  display: inline-block;
+  margin-right: -2.7em;
+}
+
+.nav li:before {
+  content: '';
+  display: block;
+
+  width: 100%;
+  height: 0.0625em;
+  position: fixed;
+  top: 50%;
+  z-index: -1;
+}
+
+  ul {
+  margin: 0rem;
+  color: black;
+}
+  .logo-wrapper {
+  background-color: white;
+  /*padding: 0.625em;*/
+  text-align: center;
+    width: 34rem;
+  }
+  .logo {
+  height: 6rem;
+  max-width: 200%;
+}
+}

@@ -6,7 +6,7 @@
 
 .logo-wrapper {
   background-color: white;
-  padding: 10px;
+  /*padding: 0.625em;*/
   text-align: center;
 }
 
@@ -21,12 +21,12 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  padding: 5px 60px;
+  padding: 0.3125em 3.75em;
 }
 
 .wrapperLeft {
   flex-basis: 50%;
-  margin-left: calc(2% + 8px);
+  margin-left: calc(2% + 0.5em);
 }
 
 .wrapperRight {
@@ -51,7 +51,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .color {
     height: 100vh;
   background: #5ca3ff; /* fallback for old browsers */
@@ -119,7 +119,7 @@ ul {
 }
 
 .header {
-  height: 60px;
+  height: 3.75em;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -134,7 +134,7 @@ ul {
 }
 
 .footer {
-  height: 60px;
+  height: 3.75em;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -145,21 +145,21 @@ ul {
 
 
 .card {
-  height: 70vh;
+  height: 60vh;
   position: relative;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   margin-left: 2rem;
   margin-right: 2rem;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgb(0, 0, 0, 0.5);
-  border-top-left-radius: 75px;
-  border-bottom-left-radius: 75px;
+  border: 0.0625em solid rgb(0, 0, 0, 0.5);
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   padding: 0.50rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.625em);
   flex-basis: auto;
   flex-grow: 1;
   overflow-y: scroll;
-  box-shadow: 0 0 50px #003beb;
+  box-shadow: 0 0 3.125em #003beb;
 
   
 }
@@ -167,9 +167,9 @@ ul {
 .card:after {
   content: '';
   height: 70vh;
-  width: 1px;
+  width: 0.0625em;
   position: absolute;
-  left: -1px;
+  left: -0.0625em;
   top: 65%;
   transition: top, opacity;
   transition-duration: 600ms;
@@ -190,15 +190,15 @@ ul {
 }
 
 .card-content {
-  margin-top: 20px;
+  margin-top: 1.25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.1) 1px,
-    transparent 1px
+    rgba(255, 255, 255, 0.1) 0.0625em,
+    transparent 0.0625em
   );
   background-position: 50% 50%;
   background-size: 1.1rem 1.1rem;
@@ -209,13 +209,13 @@ ul {
 }
 
 .card .card-body {
-  padding-top: 50px; 
+  padding-top: 3.125em; 
   overflow-y: scroll;
 }
 
 
 .card-content::-webkit-scrollbar {
-  width: 8px;
+  width: 0.5em;
 }
 
 .card-content::-webkit-scrollbar-track {
@@ -224,7 +224,7 @@ ul {
 
 .card-content::-webkit-scrollbar-thumb {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 
 .card-content::-webkit-scrollbar-thumb:hover {
@@ -243,7 +243,7 @@ ul {
 }
 
 .ClassName {
-  padding: 20px;
+  padding: 1.25em;
   color: rgb(0, 0, 0);
   font-size: 2.6rem;
   text-align: center;
@@ -272,24 +272,18 @@ ul {
 }
 
 .buttons-wrapper {
-  margin-top: 2% ;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-right: 4rem;
   gap: 1rem;
 }
 
 .cheatsheets {
-  background-color: var(--blue);
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 20px;
-  margin: 4em 4em;
-  border-radius: 5px;
   position: absolute;
   top: 0;
   right: 0;
+  margin-top: 1.25%;
+  margin-right: 4%;
 }
 
 button {
@@ -305,11 +299,11 @@ button {
 }
 
 button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.125em);
 }
 
 .link {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 0.0625em solid rgba(0, 0, 0, 0.5);
   color: #000000;
   display: block;
   font-size: clamp(2em, 5vmin, 2.5em);
@@ -335,21 +329,21 @@ button:hover {
     var(--light-blue)
   );
   content: '';
-  left: 0px;
-  top: 0px;
+  left: 0em;
+  top: 0em;
   height: 100%;
   width: 0%;
   position: absolute;
 }
 
 .link:nth-child(3) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 0.0625em solid rgba(255, 255, 255, 0.5);
 }
 
 .screen-reader-text {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
+  top: -624.9375em;
+  left: -624.9375em;
 }
 
 
@@ -393,7 +387,7 @@ html {
 .nav li {
   position: relative;
   display: inline-block;
-  margin-right: -4px;
+  margin-right: -0.25em;
 }
 
 .nav li:before {
@@ -401,7 +395,7 @@ html {
   display: block;
 
   width: 100%;
-  height: 1px;
+  height: 0.0625em;
   position: fixed;
   top: 50%;
   z-index: -1;
@@ -422,28 +416,28 @@ html {
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
 
   color: #ffffff;
-  margin: 36px;
-  width: 144px;
-  height: 140px;
+  margin: 2.25em;
+  width: 9em;
+  height: 8.75em;
   position: relative;
   text-align: center;
-  line-height: 144px;
+  line-height: 9em;
   border-radius: 50%;
 
 }
 
 .nav a:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: #3c4fe0 0 0 0 0.09375em inset, rgba(45, 35, 66, .4) 0 0.125em 0.25em, rgba(45, 35, 66, .3) 0 0.4375em 0.8125em -0.1875em, #3c4fe0 0 -0.1875em 0 inset;
 }
 
 .nav a:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
+  box-shadow: rgba(45, 35, 66, .4) 0 0.25em 0.5em, rgba(45, 35, 66, .3) 0 0.4375em 0.8125em -0.1875em, #3c4fe0 0 -0.1875em 0 inset;
+  transform: translateY(-0.125em);
 }
 
 .nav a:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
+  box-shadow: #3c4fe0 0 0.1875em 0.4375em inset;
+  transform: translateY(0.125em);
 }
 
 
@@ -453,8 +447,8 @@ html {
  
 /* Change the width of the scrollbar */
 ::-webkit-scrollbar {
-  width: 2px;
-  height: 5px;
+  width: 0.125em;
+  height: 0.3125em;
 }
 
 /* Change the color of the scrollbar */
@@ -465,45 +459,45 @@ html {
 /* Change the color of the track */
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1);
-  height: 5px;
+  height: 0.3125em;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.625em;
 }
 
 /* For WebKit browsers */
 ::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 10px;
+  width: 0.3125em;
+  border-radius: 0.625em;
 }
 
 /* For Firefox */
 ::-moz-scrollbar {
-  width: 10px;
-  border-radius: 10px;
+  width: 0.625em;
+  border-radius: 0.625em;
 }
 
 /* For IE/Edge */
 ::-ms-scrollbar {
-  width: 10px;
-  border-radius: 10px;
+  width: 0.625em;
+  border-radius: 0.625em;
 }
 
 /* For all browsers */
 ::-webkit-scrollbar-thumb {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 
 ::-moz-scrollbar-thumb {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 
 ::-ms-scrollbar-thumb {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 
 /* Select the track of the scrollbar */
@@ -512,7 +506,7 @@ html {
   background-color: #ffffff;
 
   /* Set the border-radius to create rounded corners */
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 
 
@@ -534,7 +528,7 @@ html {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 0.125em;
   bottom: 0;
   left: 0;
   background-color: black;
@@ -546,4 +540,25 @@ html {
 .link:hover::after, .new-content:hover::after {
   visibility: visible;
   transform: scaleX(1);
+}
+
+.creator-credits {
+  font-family: system-ui;
+  color: white;
+  text-align: center;
+
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 25%;
+  margin-right: 50%;*/
+}
+
+.footer {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: fixed;
+    bottom: 1px;
 }

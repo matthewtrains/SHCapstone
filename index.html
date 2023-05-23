@@ -3,9 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+
   <title>SouthHills</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="button.css" rel="stylesheet" type="text/css" />
+  <link href="mobile.css" rel="stylesheet" type="text/css" />
+  <link href="modal.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="./script.js"></script>
+
+  <div class="logo-wrapper" id="cheatSheet">
+    <a href="https://www.southhills.edu">
+      <img class="logo" src="SouthHillsWebRetina.svg" alt="SouthHills Logo">
+    </a>
+    <div>
+      <button class="cheatSheets button-29-Custom">Cheatsheets!</button>
+    </div>
+  </div>
 
 </head>
 
@@ -13,13 +26,6 @@
 
 <body>
 
-<div class="logo-wrapper">
-    <a href="https://www.southhills.edu">
-      <img class="logo" src="SouthHillsWebRetina.svg" alt="SouthHills Logo">
-    </a>
-  </div>
-  
-  
   <div class="buttons-wrapper">
     <nav>
       <ul class="nav">
@@ -43,17 +49,18 @@
         </li>
       </ul>
     </nav>
-    <button class="button-29" id="cheatSheets">Cheatsheets!</button>
   </div>
 
-  
+
   <div class="wrapper">
     <div class="wrapperLeft">
       <div class="card">
         <h1 class="ClassName">Classes:</h1>
+
+
         <div class="card-content">
           <div id="classes">
-            <h2>Please select a class above.</h2>
+            <h2>Please select a program above.</h2>
           </div>
         </div>
       </div>
@@ -71,7 +78,28 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="./script.js"></script>
+ <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header" id="header">
+        <span class="close">&times;</span>
+        <h2 class="modal-text-color">Class:</h2>
+      </div>
+      <div class="modal-body modal-text-color modal-scroll" id="modalDetails">
+      </div>
+
+    </div>
+
+  </div>
+  
+  
+  <div class="footer">
+    <p class="creator-credits">👋 Created by Matthew Sekerak, Nia Mcklich and Mitchell Becker</p>
+  </div>
+
+
 </body>
 
 </html>

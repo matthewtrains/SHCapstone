@@ -727,7 +727,7 @@
           ]
         },
 	  {
-          "name": "",
+          "name": "WEB SERVER ADMINISTRATION",
           "learnings": [
             "Apache",
 		"Cluster",
@@ -1134,6 +1134,398 @@
 		"body",
 		"footer",
 		"image"
+          ]
+        },
+	{
+          "name": "UNIX/LINUX ESSENTIALS",
+          "learnings": [
+            ".",
+		".=",
+		"adduser",
+		"cat <filename>",
+		"cat > file",
+		"cat file",
+		"cd",
+		"chgrp",
+		"chmod",
+		"chown",
+		"cp",
+		"delgroup",
+		"deluser",
+		"df or df -h",
+		"du",
+		"echo",
+		"$VARIABLE",
+		"export",
+		"file",
+		"find",
+		"free -m",
+		"grep",
+		"groupadd",
+		"gunzip",
+		"gzip file",
+		"htop",
+		"hwinfo",
+		"ip a",
+		"ip r",
+		"kill or killall",
+		"locate",
+		"ls",
+		"ls -a",
+		"ls -l",
+		"mkdir",
+		"modinfo <module_name>",
+		"mount and umount",
+		"mv",
+		"nano",
+		"nice",
+		"ping",
+		"poweroff",
+		"printf",
+		"ps aux OR ps -ef",
+		"pwd",
+		"reboot",
+		"rm or rmdir",
+		"rm -r",
+		"ssh",
+		"sudo",
+		"apt install",
+		"apt remove",
+		"dnf install",
+		"dnf remove",
+		"fdisk",
+		"tar",
+		"top",
+		"touch",
+		"traceroute",
+		"tree",
+		"uname -a",
+		"unset",
+		"useradd",
+		"usermod",
+		"vi",
+		"vim",
+		"whoami",
+		"packages",
+		"-h"
+          ]
+        },
+	  {
+          "name": "INTERMEDIATE PROGRAMMING",
+          "learnings": [
+            "parallel arrays",
+		"parameters",
+		"--",
+		"!",
+		"!=",
+		"%",
+		"&&",
+		"//",
+		";",
+		"||",
+		"++",
+		"<",
+		"<=",
+		"<variable type>[ ] or [(int)]",
+		"==",
+		"===",
+		">",
+		">=",
+		"and",
+		"class",
+		"library",
+		"object",
+		"object orient programming",
+		"or",
+		"sorting",
+		"static",
+		"pass by value",
+		"pass by reference",
+		"calling a function/method/class/object",
+		"overloading",
+		"namespace",
+		"public",
+		"set/unset",
+		"get",
+		"set",
+		"data member",
+		"constant",
+		"constructor",
+		"NULL",
+		"composition",
+		"try / catch blocks",
+		"DateTime()"
+          ]
+        },
+	  {
+          "name": "INTRODUCTION TO COMPUTER GRAPHICS (PHOTOSHOP ELECTIVE)",
+          "learnings": [
+            "layer",
+		"magic wand",
+		"fill bucket",
+		"content aware",
+		"transparancy",
+		"opacity",
+		"red-eye",
+		"blurring and sharpening",
+		"effects",
+		"crop",
+		"resize",
+		"resolution",
+		"edit",
+		"file types",
+		"borders",
+		"insertion",
+		"marquee",
+		"move",
+		"edges",
+		"lasso",
+		"grids and guides",
+		"snapping",
+		"enhance and repair",
+		"dodge, burn, sponge",
+		"lens",
+		"blending",
+		"filters",
+		"cloning"
+          ]
+        },
+	  {
+          "name": "BUSINESS APPLICATIONS",
+          "learnings": [
+            "Word",
+		"Excel",
+		"Powerpoint",
+		"margins",
+		"paragragh",
+		"bullets",
+		"lists",
+		"cell",
+		"formulas",
+		"replace",
+		"spacing",
+		"alignment",
+		"layout"
+          ]
+        },
+	  {
+          "name": "INTRODUCTION TO SQL DATABASES",
+          "learnings": [
+            "*",
+		"avg()",
+		"between",
+		"count()",
+		"drop",
+		"except",
+		"foreign key",
+		"from",
+		"group by",
+		"having",
+		"inner join",
+		"left join",
+		"like",
+		"limit()",
+		"max()",
+		"min()",
+		"nested queries",
+		"NULL",
+		"order by",
+		"outer join",
+		"primary key",
+		"stored procedure",
+		"right join",
+		"function",
+		"select",
+		"Structured Query Language (SQL)",
+		"sum()",
+		"table",
+		"text",
+		"top()",
+		"union",
+		"union all",
+		"varchar()",
+		"view",
+		"where",
+		"wildcards in sql",
+		"record",
+		"row",
+		"column",
+		"table structure or definition",
+		"query",
+		"record",
+		"relationships"
+          ]
+        },
+	  {
+          "name": "PHP HYBRID",
+          "learnings": [
+            "$_GET",
+		"$_POST",
+		"blade",
+		"route",
+		"factory",
+		"view",
+		"controller",
+		"artisan",
+		"seeding",
+		"CRUD",
+		"API",
+		"laragon"
+          ]
+        },
+	  {
+          "name": "CONTENT MANAGEMENT SYSTEMS",
+          "learnings": [
+            "wordpress",
+		"plug-ins",
+		"block",
+		"themes",
+		"migration",
+		"static/dynamic",
+		"site health and security",
+		"parent and child"
+          ]
+        },
+	  {
+          "name": "DATA STRUCTURE AND ALGORITHMS",
+          "learnings": [
+            "recusion",
+		"waterfall",
+		"agile",
+		"base case",
+		"nodes",
+		"edges",
+		"binary tree",
+		"push/pop",
+		"linked list",
+		"stack",
+		"hashing",
+		"salting",
+		"hash-tables",
+		"sorting",
+		"traveling salesman",
+		"deep first vs breath",
+		"frontend/backend",
+		"queues",
+		"Big O Notation",
+		"graphs",
+		"Vertices",
+		"FIFO",
+		"LIFO"
+          ]
+        },
+	  {
+          "name": "CLOUD and DEVOPS FUNDAMENTALS",
+          "learnings": [
+            "Amazon Web Services (AWS)",
+		"Auto Scaling",
+		"Cloud",
+		"Cloud Computing",
+		"Data Center",
+		"Infrastructure as a Service (IaaS)",
+		"Network as a Service (NaaS)",
+		"Platform as a Service (PaaS)",
+		"Software as a Service (SaaS)",
+		"docker",
+		"containers",
+		"digital ocean",
+		"goolge cloud"
+          ]
+        },
+	  {
+          "name": "JOB SEARCH SKILLS",
+          "learnings": [
+            "resume",
+		"interview",
+		"networking"
+          ]
+        },
+	  {
+          "name": "PROJECT MANAGEMENT",
+          "learnings": [
+            "teams",
+		"jira",
+		"leader",
+		"sponser",
+		"deliverables",
+		"stakeholders",
+		"charter",
+		"priorities"
+          ]
+        },
+	  {
+          "name": "ETHICAL HACKING AND DEFENSE",
+          "learnings": [
+            "Advanced Encryption Standard (AES)",
+		"Data Encryption Standard (DES)",
+		"Denial of Service (DoS)",
+		"Encryption",
+		"Firewall",
+		"Intrusion Detection System (IDS)",
+		"Malware",
+		"Service Pack",
+		"Spyware",
+		"Trojan Horse",
+		"Worm",
+		"Zombie",
+		"social engineering",
+		"penatrtion testing",
+		"port scan",
+		"network mapping",
+		"aircrack-ng",
+		"parrot OS",
+		"Kali OS",
+		"passive",
+		"Wi-Fi Protected Access (WPA)",
+		"Wired Equivalent Privacy (WEP)"
+          ]
+        },
+	  {
+          "name": "INTRODUCTION TO BUSINESS",
+          "learnings": [
+            "SWOT"
+          ]
+        },
+	  {
+          "name": "ORAL BUSINESS COMMUNICATIONS",
+          "learnings": [
+            "speech",
+		"Communication",
+		"voice",
+		"Audience",
+		"Occasion",
+		"Speech of Welcome",
+		"Types of Speeches and Presentations"
+          ]
+        },
+	  {
+          "name": "HUMAN RELATIONS IN THE WORKPLACE",
+          "learnings": [
+            "waiting on Matt"
+          ]
+        },
+	  {
+          "name": "JAVASCRIPT",
+          "learnings": [
+            "Need programmers help "
+          ]
+        },
+	  {
+          "name": "IoT PROGRAMMING",
+          "learnings": [
+            "Need programmers help "
+          ]
+        },
+	  {
+          "name": "ANDROID APPLICATION DEVELOPMENT",
+          "learnings": [
+            "Need programmers help"
+          ]
+        },
+	  {
+          "name": "APPLE APPLICATION DEVELOPMENT",
+          "learnings": [
+            "Need programmers help "
           ]
         }
 ]

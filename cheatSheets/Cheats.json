@@ -1,0 +1,49 @@
+{
+      "name": "algebra",
+      "learnings": [
+        {
+          "learning": "order of operations ",
+          "description": "the order we do basic math functions "
+		},
+		{
+          "learning": "plot points ",
+          "description": "points on a graph "
+		},
+		{
+          "learning": "slope ",
+          "description": "angle between graph points - slope(m)= y1-x1/y-x "
+		},
+		{
+          "learning": "slope intercept ",
+          "description": "y=mx+b  b is (y intercept) "
+		},
+		{
+          "learning": "linear equation ",
+          "description": "eqution for plotting a line "
+		},
+		{
+          "learning": "axis ",
+          "description": "x axis runs horizontal y axis runs vertical. Perpendiculr to each other "
+		},
+		{
+          "learning": "quadrant ",
+          "description": "one of four sections of a linear graph(x+y+, x+y-, x-y+, x-y-) "
+		},
+		{
+          "learning": "coordinate plane ",
+          "description": "graph for plotting points "
+		},
+		{
+          "learning": "point slope ",
+          "description": "(y – y1) = m(x – x1) "
+		},
+		{
+          "learning": "standard form ",
+          "description": "Ax+By=C "
+		},
+		{
+          "learning": "intersect ",
+          "description": "where data point line crosses axis or where 2 data point lines cross each other "
+		}
+		  ]
+}
