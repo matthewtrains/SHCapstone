@@ -70,19 +70,17 @@
   .card {
     margin: 1rem;
     padding: 1rem;
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     overflow-y: scroll;
 
   }
 
   .wrapper {
-    margin: 2rem;
-    margin-left: 2.05rem;
+    margin: 2em;
+    margin-left: 3.6em;
     text-align: center;
   }
-
-  
   
 }
 
@@ -153,7 +151,6 @@ ul {
   background-color: rgba(255, 255, 255, 0.2);
   border: 0.0625em solid rgb(0, 0, 0, 0.5);
   border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
   padding: 0.50rem;
   backdrop-filter: blur(0.625em);
   flex-basis: auto;
@@ -243,13 +240,19 @@ ul {
 }
 
 .ClassName {
-  padding: 1.25em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+
   color: rgb(0, 0, 0);
   font-size: 2.6rem;
   text-align: center;
   
 }
 
+.ClassNameCS
+{
+  padding: 1.25em;
+}
 
 .card-content > h3 {
   color: black;
@@ -283,7 +286,7 @@ ul {
   top: 0;
   right: 0;
   margin-top: 1.25%;
-  margin-right: 4%;
+  margin-right: 5%;
 }
 
 button {
@@ -334,10 +337,6 @@ button:hover {
   height: 100%;
   width: 0%;
   position: absolute;
-}
-
-.link:nth-child(3) {
-  border-bottom: 0.0625em solid rgba(255, 255, 255, 0.5);
 }
 
 .screen-reader-text {
@@ -561,4 +560,25 @@ html {
     padding-bottom: 0;
     position: fixed;
     bottom: 1px;
+}
+
+.marquee {
+  font-size: xx-large;
+  font-family: system-ui;
+  color: white;
+}
+
+.marquee a {
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+.marquee a:hover {
+    color:#ff0a0a; 
+    cursor:pointer;  
+}
+.marquee a:visited {
+    color: #ffffff;
+    text-decoration: none; 
 }

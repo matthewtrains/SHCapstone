@@ -15,8 +15,8 @@
 .wrapperRight {
   flex-basis: 10%;
   margin-left: 4%;
-  width: 10rm;
-  display: hidden; /* Hidden by default */
+  width: 10rem;
+  display: none; /* Hidden by default */
 
 }
 .card {
@@ -30,25 +30,26 @@
 
   .buttonsOLD {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   gap: 1rem;
   margin-top: 0.5rem;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   gap: 0.2rem;
   margin-top: 0.5rem;
+  justify-content: center;
   flex-wrap: wrap; /* Allow buttons to wrap to the next line */
 }
   
 .buttons-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
   gap: 0.1rem;
-  padding-left: 2rem;
+  margin-left: 5.4em;
 }
 
 .cheatsheetsOLD {
@@ -60,9 +61,20 @@
 }
 
   .cheatsheets {
-  position: absolute;
+  /*position: absolute;
   top: 200vw;
-  right: 10%;
+  margin-right: -4.3rem;*/
+    
+
+  position: relative;
+  top: 0;
+  right: 0;
+  margin-top: 0%;
+  margin-left: 20.4vw;
+
+
+  
+  font-size: 3.125em;
   /*margin-top: 200%; */
   /* margin-right: 15%; */
 }
@@ -111,10 +123,59 @@ button {
   background-color: white;
   /*padding: 0.625em;*/
   text-align: center;
-    width: 34rem;
+    width: 35rem;
   }
   .logo {
   height: 6rem;
   max-width: 200%;
 }
+
+.goback {
+  border: 0;
+  border-radius: 0.375em;
+
+  line-height: 1;
+
+
+  position: absolute;
+  top: 175vw;
+  right: -42.4%;
+  
+  font-size: 3.125em;
+
+}
+
+.hidden {
+  display: none;
+}
+
+  .marquee {
+  font-size: xx-large;
+  font-family: system-ui;
+  color: white;
+    margin-right: -8rem;
+}
+
+.cheatsheetsdivbox {
+  font-size: 15pt;
+}  
+
+  .footerCS {
+    width: 115%;
+    height: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: fixed;
+    background-color: #333;
+    bottom: .5px;
+}
+
+  .creator-creditsCS {
+  font-family: system-ui;
+  color: white;
+  text-align: center;
+  margin-top: .2rem;
+  margin-left: 3rem;
+}
+  
 }

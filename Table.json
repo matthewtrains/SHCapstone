@@ -815,7 +815,12 @@
 	  {
           "name": "HUMAN RELATIONS IN THE WORKPLACE",
           "learnings": [
-            "waiting on Matt"
+            "Understanding Yourself and Others",
+            "Perception",
+            "Communication Barriers",
+            "Nonverbal Communications",
+            "Listening Skills",
+            "Dealing with Difficult People"
           ]
         }
      ]
@@ -1507,25 +1512,114 @@
 	  {
           "name": "JAVASCRIPT",
           "learnings": [
-            "Need programmers help "
+            "Scafolded projects",
+            "Dev tools in browser",
+            "Strongly typed vs loosely types languages",
+            "PWAs (Progressive Web Apps",
+            "Web Sockets",
+            "DOM (Document Object Model)",
+            "Console and other DOM features",
+            "Vite",
+            "Bootstrap",
+            "Angualar/Ionic/React/Vue frameworks",
+            "Manipulating html through a script",
+            "SVGs (Scaled Vector Graphics)",
+            "Service Workers",
+            "Basic Vanilla Javascript",
+            "NPM install/NPM plugins",
+            "Twil",
+            "Node js",
+            "Components/Modules/Libraries",
+            "JQuery",
+            "caniuse site for compatibility",
+            "Code Validators"
           ]
         },
 	  {
           "name": "IoT PROGRAMMING",
           "learnings": [
-            "Need programmers help "
+            "Breadboard",
+            "Python",
+            "Raspberry Pi",
+            "RFID",
+            "LEDs",
+            "Resistors",
+            "Jumpers",
+            "Bar Graph LEDs",
+            "Transistors",
+            "Thermistors",
+            "Heat Syncs",
+            "GPIO Connector",
+            "Display Connector",
+            "Power Connector",
+            "Micro HDMI Connector",
+            "Camera Connector",
+            "Audio Connector",
+            "Ethernet Connector",
+            "USB Connector",
+            "Power",
+            "+/-",
+            "Ground/GND",
+            "SDA",
+            "MOSI",
+            "MISO",
+            "Breadboard Pin Numbering",
+            "Completing Circuits",
+            "Buttons",
+            "Analog/PWM",
+            "Buzzers",
+            "Potentiometer",
+            "Joysticks",
+            "Motor and Driver",
+            "Step Motor",
+            "Segment Display",
+            "LCD Display",
+            "Hygrothermograph",
+            "Matrix Keypad",
+            "Ultrasonic Ranging",
+            "LED Matrix",
+            "Photoresistor"
           ]
         },
 	  {
           "name": "ANDROID APPLICATION DEVELOPMENT",
           "learnings": [
-            "Need programmers help"
+            "Kotlin",
+            "Android Native Apps",
+            "Jetpack Compose",
+            "UI Elements",
+            "Modifiers (padding, margins, spacers, color, etc...",
+            "Composable",
+            "Card",
+            "Text",
+            "Style",
+            "Layouts",
+            "Columns",
+            "Rows",
+            "Images",
+            "Material Design",
+            "Theming",
+            "Emulators"
           ]
         },
 	  {
           "name": "APPLE APPLICATION DEVELOPMENT",
           "learnings": [
-            "Need programmers help "
+            "Swift UI",
+            "UI Elements",
+            "Modifiers (padding, margins, spacers, color, etc...",
+            "Card",
+            "Text",
+            "Style",
+            "Columns",
+            "Rows",
+            "Images",
+            "Material Design",
+            "Theming",
+            "Emulators",
+            "IOS Native Apps",
+            "Animations",
+            "Two-way Data Binding"
           ]
         }
 ]

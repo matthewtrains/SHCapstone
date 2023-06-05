@@ -1,21 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
+  const tableBody = document.getElementById("table-body");
 
-  anchorName = document.getElementByName(this.name)
-  
-  // Load the JSON file
-  fetch('Cheats.json')
-    .then(response => response.json())
-    .then(data => {
-      // Loop through the learnings array and create a new row and cells for each learning
-      data.cheats.find(cheats => cheats.name = anchorName.forEach((learningObj) => {
-        const newRow = document.createElement('tr');
-        const learningCell = document.createElement('td');
-        learningCell.innerText = learningObj.learning;
-        const descriptionCell = document.createElement('td');
-        descriptionCell.innerText = learningObj.description;
-        newRow.appendChild(learningCell);
-        newRow.appendChild(descriptionCell);
-        learning.appendChild(newRow);
-      });
+  // Add click event listeners to all anchor elements
+  const anchorElements = document.querySelectorAll('a[id]');
+  anchorElements.forEach(anchor => {
+    anchor.addEventListener('click', function() {
+      const anchorId = anchor.getAttribute('id'); // Get the id attribute of the clicked anchor element
+
+      // Load the JSON file
+      fetch('Cheats.json')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          const section = data[anchorId]; // Use anchorId to access the corresponding section
+          console.log(anchorId)
+
+          // Populate the table body with the topics from the section
+          if (section) {
+            // Clear the table body before populating it with new data
+            tableBody.innerHTML = "";
+            section.forEach(topic => {
+              let row = tableBody.insertRow();
+              let cell1 = row.insertCell(0);
+              let cell2 = row.insertCell(1);
+
+              cell1.textContent = topic.learn;
+              cell2.textContent = topic.description;
+            });
+          }
+        });
     });
+  });
 });

@@ -1,31 +1,30 @@
-<html class="color">
+<!-- <!DOCTYPE html>
+<!-- Cheetsheets Box needs fixed after adding this for validation purposes, it prevents the site being loaded in qurik mode -->
+<link rel="manifest" href="manifest.json" />
+<html class="color" lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
 
   <title>SouthHills</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="button.css" rel="stylesheet" type="text/css" />
-  <link href="mobile.css" rel="stylesheet" type="text/css" />
-  <link href="modal.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="./script.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="button.css" rel="stylesheet" type="text/css">
+  <link href="mobile.css" rel="stylesheet" type="text/css">
+  <link href="modal.css" rel="stylesheet" type="text/css">
+  <script src="./script.js"></script>
+</head>
 
+<body>
   <div class="logo-wrapper" id="cheatSheet">
     <a href="https://www.southhills.edu">
       <img class="logo" src="SouthHillsWebRetina.svg" alt="SouthHills Logo">
     </a>
-    <div>
-      <button class="cheatSheets button-29-Custom">Cheatsheets!</button>
-    </div>
   </div>
 
-</head>
 
-
-
-<body>
-
+  </div>
   <div class="buttons-wrapper">
     <nav>
       <ul class="nav">
@@ -55,10 +54,11 @@
   <div class="wrapper">
     <div class="wrapperLeft">
       <div class="card">
-        <h1 class="ClassName">Classes:</h1>
+
 
 
         <div class="card-content">
+          <h1 class="ClassName">Classes:</h1>
           <div id="classes">
             <h2>Please select a program above.</h2>
           </div>
@@ -78,28 +78,36 @@
     </div>
   </div>
 
- <!-- The Modal -->
-  <div id="myModal" class="modal">
+  <div id="modalDiv">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header" id="header">
-        <span class="close">&times;</span>
-        <h2 class="modal-text-color">Class:</h2>
-      </div>
-      <div class="modal-body modal-text-color modal-scroll" id="modalDetails">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header" id="header">
+          <span class="close">&times;</span>
+          <h2 class="modal-text-color">Class:</h2>
+        </div>
+        <div class="modal-body modal-text-color modal-scroll" id="modalDetails">
+        </div>
+
       </div>
 
     </div>
-
   </div>
-  
-  
+  <div>
+    <button class="cheatSheets button-29-Custom" id="cheatSheets">Cheatsheets!</button>
+  </div>
+
+
   <div class="footer">
     <p class="creator-credits">👋 Created by Matthew Sekerak, Nia Mcklich and Mitchell Becker</p>
   </div>
 
 
+<script type="text/javascript" src="./cheatSheets/cheatsscript.js"></script>
 </body>
+
 
 </html>

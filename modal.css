@@ -6,7 +6,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 90vh;
+  height: 50vh;
   background-color: rgba(0, 0, 0, 0); /* Modal Close hit box */
 
   animation-name: fadeIn;
