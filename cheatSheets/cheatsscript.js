@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const tableBody = document.getElementById("table-body");
+  let tableBody = document.getElementById("table-body");
 
   // Add click event listeners to all anchor elements
   const anchorElements = document.querySelectorAll('a[id]');
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const anchorId = anchor.getAttribute('id'); // Get the id attribute of the clicked anchor element
 
       // Load the JSON file
-      fetch('Cheats.json')
+      fetch('Table.js')
         .then(response => response.json())
         .then(data => {
           console.log(data)
